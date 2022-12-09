@@ -1,7 +1,7 @@
 /** A class representing each item in the warehouse storage.
  *
  * @author 10119
- * @version 1.2.0
+ * @version 1.1.0
  */
 public class Item {
   private final String itemNumber;
@@ -70,7 +70,7 @@ public class Item {
     this.category = Category.getCategory(categoryIndex);
   }
 
-  /** Method for cloning the Item-register.
+  /** Constructor for cloning the Item-register.
    *
    * @param cloningItem a deepCopy as Item
    */

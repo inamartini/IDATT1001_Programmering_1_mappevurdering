@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.Comparator;
 
@@ -6,7 +5,7 @@ import java.util.Comparator;
  * editing and searching for items.
  *
  * @author 10119
- * @version 1.2.0
+ * @version 1.1.0
  */
 
 public class ItemRegister {
@@ -24,12 +23,14 @@ public class ItemRegister {
    * @return returns if the item number is duplicate as boolean
    */
   public boolean testForDuplicateItemNumber(String itemNumber) {
+    boolean itemExists = false;
     for (Item items : allItems) {
       if (items.getItemNumber().equalsIgnoreCase(itemNumber)) {
-        return true;
+        itemExists = true;
+        break;
       }
     }
-    return false;
+    return itemExists;
   }
 
   /** Method to register a new item.
@@ -116,9 +117,6 @@ public class ItemRegister {
       }
     }
     return itemsWithDescription;
-    // SJEKK NÅR DU SØKER ETTER "AND" dårlig at den uansett retunerer lista?
-    //finner ikke med skrivefeil eks tal istedenfor tall
-    // ikke kaste exception?
   }
 
   /** Method to find an item with a specific itemNumber and description.

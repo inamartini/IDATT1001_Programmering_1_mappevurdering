@@ -4,7 +4,7 @@ import java.util.Scanner;
 /** A class representing a text based user interface of the application.
  *
  * @author 10119
- * @version 1.2.0
+ * @version 1.1.0
  */
 
 public class Client {
@@ -79,6 +79,7 @@ public class Client {
       case EXIT -> {
         System.out.println("Thank you for using the items app!");
         finished = true;
+        System.exit(0);
       }
       default -> System.out.println("Please choose a number between 1 and 12");
     }
