@@ -167,7 +167,7 @@ public class Item {
    * @return returns info about the item as String
    */
   public String toString() {
-    return "Item number: " + this.getItemNumber() + ", Brand name: " + this.getBrandName()
+    return "\nItem number: " + this.getItemNumber() + ", Brand name: " + this.getBrandName()
         + ", Category: " + this.getItemCategoryString() + ", Price: " + this.getPrice()
         + " kr, Description: " + this.getDescription() + ", Color: " + this.getColor()
         + ", \nWeight: " + this.getWeight() + ", Length: " + this.getLength()

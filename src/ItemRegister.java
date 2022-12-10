@@ -7,7 +7,6 @@ import java.util.Comparator;
  * @author 10119
  * @version 1.1.0
  */
-
 public class ItemRegister {
 
   private final ArrayList<Item> allItems;
@@ -69,7 +68,7 @@ public class ItemRegister {
 
     if (getNumberOfItems() > 0) {
       for (Item items : allItems) {
-        allItemsList.append(items.toSmallString()).append("\n");
+        allItemsList.append(items).append("\n");
       }
       return allItemsList.toString();
     }
@@ -290,15 +289,15 @@ public class ItemRegister {
    */
   public void addDefaultItems() {
     newItem("477B", "Big and heavy", 1000,
-        "Andersen's Laminate Flooring", 1.2, 1.4, 12, "white",
+        "Andersen's Laminate Flooring", 1.2, 1.4, 1.2, "white",
         102, 1);
     newItem("5A7B", "Big and tall", 1300, "Ina Window-shop",
         1.5, 3.45, 1.05,  "black", 10, 2);
-    newItem("8B00", "New and small", 500, "Andersen AS",
-        0.2, 0.4, 10, "green", 2, 3);
-    newItem("AA11", "Tall and heavy", 2000, "Petersen Lumber",
-        3.2, 1.0, 11, "white", 1022, 4);
-    newItem("2", "Tall, big and heavy", 99, "Lumber AS",
+    newItem("8B00", "New and small", 590, "Andersen AS",
+        0.2, 0.4, 2.05, "green", 2, 3);
+    newItem("AA11", "Tall and heavy", 249, "Petersen Lumber",
+        3.2, 1.0, 1.9, "white", 1022, 4);
+    newItem("34VK", "Tall, big and heavy", 99, "Lumber AS",
         1.3, 0.9, 10, "black", 10, 4);
   }
 
@@ -307,7 +306,7 @@ public class ItemRegister {
    * @param itemNumber item number as String
    */
   public void deleteItem(String itemNumber) {
-    for (int i = 0; i < allItems.size(); i++) {
+    for (int i = 0; i < getNumberOfItems(); i++) {
       if (allItems.get(i).getItemNumber().equalsIgnoreCase(itemNumber)) {
         allItems.remove(allItems.get(i));
       }

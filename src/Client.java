@@ -6,7 +6,6 @@ import java.util.Scanner;
  * @author 10119
  * @version 1.1.0
  */
-
 public class Client {
   private final Scanner sc = new Scanner(System.in);
   private static boolean finished = false;
